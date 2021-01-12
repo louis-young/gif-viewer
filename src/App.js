@@ -15,11 +15,11 @@ const App = () => {
     try {
       setLoading(true);
 
-      const LIMIT = 15;
+      const GIFS_PER_PAGE = 15;
 
-      const offset = (gifs.pagination.offset += LIMIT) || 0;
+      const offset = gifs.pagination.offset + GIFS_PER_PAGE || 0;
 
-      const url = `${process.env.REACT_APP_API_BASE_URL}/v1/gifs/trending?offset=${offset}&limit=${LIMIT}&api_key=${process.env.REACT_APP_API_KEY}`;
+      const url = `${process.env.REACT_APP_API_BASE_URL}/v1/gifs/trending?offset=${offset}&limit=${GIFS_PER_PAGE}&api_key=${process.env.REACT_APP_API_KEY}`;
 
       const response = await fetch(url);
 
@@ -27,9 +27,9 @@ const App = () => {
         throw new Error();
       }
 
-      const newGifs = await response.json();
+      const moreGifs = await response.json();
 
-      setGifs((gifs) => ({ data: [...gifs.data, ...newGifs.data], pagination: newGifs.pagination }));
+      setGifs((gifs) => ({ data: [...gifs.data, ...moreGifs.data], pagination: moreGifs.pagination }));
     } catch (error) {
       setError(true);
     } finally {
@@ -42,9 +42,9 @@ const App = () => {
       try {
         setLoading(true);
 
-        const LIMIT = 15;
+        const GIFS_PER_PAGE = 15;
 
-        const url = `${process.env.REACT_APP_API_BASE_URL}/v1/gifs/trending?limit=${LIMIT}&api_key=${process.env.REACT_APP_API_KEY}`;
+        const url = `${process.env.REACT_APP_API_BASE_URL}/v1/gifs/trending?limit=${GIFS_PER_PAGE}&api_key=${process.env.REACT_APP_API_KEY}`;
 
         const response = await fetch(url);
 
