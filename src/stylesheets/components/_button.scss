@@ -36,4 +36,11 @@
       background: $tertiary-color-dark;
     }
   }
+  &--center {
+    display: block;
+    margin: auto;
+  }
+  &--spaced {
+    margin: 2rem auto;
+  }
 }
