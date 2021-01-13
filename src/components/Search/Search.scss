@@ -3,7 +3,7 @@
 @import "../../stylesheets/abstracts/breakpoints";
 
 .search {
-  margin: 3rem 0;
+  margin: 3rem 0 1rem 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
@@ -12,12 +12,11 @@
   }
   &__input,
   &__submit {
-    @extend %round;
     height: 55px;
   }
   &__input {
     box-shadow: unset;
-    background: $primary-color-light;
+    background: $white;
 
     &::placeholder {
       opacity: 0.75;

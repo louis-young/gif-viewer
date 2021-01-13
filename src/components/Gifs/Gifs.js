@@ -4,7 +4,11 @@ import Gif from "../Gif/Gif";
 
 import "./Gifs.scss";
 
-const Gifs = ({ gifs, getMoreGifs }) => {
+const Gifs = ({ gifs, loading, error }) => {
+  if (error) {
+    return <p>Error.</p>;
+  }
+
   if (!gifs) {
     return <p>No gifs.</p>;
   }
@@ -16,9 +20,7 @@ const Gifs = ({ gifs, getMoreGifs }) => {
           <Gif key={gif.id} gif={gif} />
         ))}
       </ul>
-      <button className="button button--center button--spaced" onClick={getMoreGifs}>
-        Load more
-      </button>
+      {loading && <p>Loading more...</p>}
     </>
   );
 };
