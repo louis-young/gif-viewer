@@ -1,6 +1,6 @@
 # Gif Application
 
-React application to search and view trending GIFs by making requests to the GIPHY API.
+A React application to search and view trending GIFs by making requests to the GIPHY API.
 
 <!-- ![Gif Application](documentation/gif-application.jpg) -->
 
