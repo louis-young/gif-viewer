@@ -12,7 +12,11 @@ This is an application which consumes data from the Giphy API and renders trendi
 
 ## Motivation
 
-I built this application to learn more about REST API data consumption in React and handling pagination with infinite scrolling.
+I built this application to learn more about consuming data from a REST API in React and handling pagination and infinite scrolling.
+
+---
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
 
