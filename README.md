@@ -1,14 +1,12 @@
 ⚠️ Please note that this is an old project and does not reflect the quality of my current work.
 
-# GIF Application
+# GIF Viewer
 
-A website to search and view trending GIFs.
-
-<!-- ![Gif Application](documentation/gif-application.jpg) -->
+A website to view and search trending GIFs.
 
 ## Description
 
-This is an application which consumes data from the Giphy API and renders trending GIFs.
+A website that makes requests to the Giphy API and displays a grid of trending GIFs with search functionality.
 
 ## Motivation
 
